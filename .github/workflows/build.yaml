@@ -46,7 +46,7 @@ jobs:
           heroku container:login
           mvn package
           docker build --tag registry.heroku.com/${APP_NAME}/web -f Dockerfile
-          docker push https://github.com/JoSglch/dev-ops-practice/${APP_NAME}/web
+          docker push registry.heroku.com/${APP_NAME}/web
     - name: Release
       run: |
         #### AUFGABE 4 DEPLOYMENT AUF HEROKU
